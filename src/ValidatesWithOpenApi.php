@@ -16,9 +16,7 @@ trait ValidatesWithOpenApi
 
     public function buildOpenApiValidator($file)
     {
-        $this->validator = (new ValidatorBuilder)->fromYaml(
-            file_get_contents($file)
-        );
+        $this->validator = (new ValidatorBuilder)->fromYaml($file);
         return $this;
     }
 
